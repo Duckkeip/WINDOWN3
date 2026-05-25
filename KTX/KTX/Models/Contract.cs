@@ -15,6 +15,8 @@ namespace KTX.Models
         public int RoomID { get; set; }
         public decimal Price { get; set; }
 
+        public bool IsNotified { get; set; } = false;
+
         // Khóa ngoại
         public Student Student { get; set; }
         public Room Room { get; set; }

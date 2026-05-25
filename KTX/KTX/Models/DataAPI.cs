@@ -182,20 +182,24 @@ namespace WinFormsApp1.Models
             return e;
         }
 
-        public bool InsertInto (string table, string value)
+        public bool InsertInto(string table, string value)
         {
             bool result = false;
-            
             string query = "insert into " + table + " values " + value;
-
-            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+            try
             {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.ExecuteNonQuery();
-                result = true;
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    result = true;
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); // hiện lỗi cụ thể
             }
             return result;
         }

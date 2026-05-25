@@ -134,9 +134,10 @@ namespace WinFormsApp1
             {
                 student = new Student();
                 student.Name = studentName.Text;
+                student.StudentID = long.Parse(StudentID.Text); // thêm dòng này
                 student.DoB = studentDoB.Value.Date;
                 student.Class = studentClass.Text;
-                student.Gender = femaleCheck.Checked ? "Nam" : "Nữ";
+                student.Gender = maleCheck.Checked ? "Nam" : "Nữ";
                 student.Address = studentAddress.Text;
                 using (var db = new EFCore())
                 {
@@ -150,6 +151,7 @@ namespace WinFormsApp1
                 femaleCheck.CheckState = CheckState.Unchecked;
                 maleCheck.CheckState = CheckState.Unchecked;
                 toolTip1.Show("Lưu thành công!", btSave, 0, 0, 1000);
+                DialogResult = DialogResult.OK; // thêm dòng này
             }
             catch (Exception ex)
             {

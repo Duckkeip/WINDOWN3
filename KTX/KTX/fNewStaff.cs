@@ -52,11 +52,21 @@ namespace WinFormsApp1
                 toolTip1.Show("Hãy nhập số điện thoại nhân viên?", staffPhone, 0, 0, 1000);
                 return;
             }
-            string newStaff = "('" + staffID.Text.ToString() + "','" +
-                staffName.Text.ToString() + "','" + staffAddress.Text.ToString()
-                + "', '" + staffPhone.Text.ToString() + "')";
+            if (string.IsNullOrWhiteSpace(staffUsername.Text))
+            {
+                toolTip1.Show("Hãy nhập số tài khoản nhân viên?", staffUsername, 0, 0, 1000);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(staffPassword.Text))
+            {
+                toolTip1.Show("Hãy nhập mật khẩu nhân viên?", staffPassword, 0, 0, 1000);
+                return;
+            }
+            string newStaff = "(N'" + staffName.Text + "', N'" +
+                staffAddress.Text + "', '" + staffPhone.Text + "', '" +
+                staffUsername.Text + "', '" + staffPassword.Text + "', 1)";
 
-            if (dataAPI.InsertInto("Staff", newStaff))
+            if (dataAPI.InsertInto("Staffs", newStaff))
             {
                 toolTip1.Show("Thêm nhân viên thành công!", staffSave, 0, 0, 1000);
                 staffID.ResetText();
@@ -125,6 +135,11 @@ namespace WinFormsApp1
         private void fNewStaff_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = false;
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

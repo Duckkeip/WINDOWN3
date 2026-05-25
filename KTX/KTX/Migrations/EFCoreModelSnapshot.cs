@@ -33,6 +33,9 @@ namespace KTX.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsNotified")
+                        .HasColumnType("bit");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -123,7 +126,7 @@ namespace KTX.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("StudentID"), 2154810000L);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("StudentID"));
 
                     b.Property<string>("Address")
                         .IsRequired()

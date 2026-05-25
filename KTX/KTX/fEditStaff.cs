@@ -29,16 +29,17 @@ namespace WinFormsApp1
         private void fEditStaff_Load(object sender, EventArgs e)
         {
             DataSet data = new DataSet();
-            data = dataAPI.GetAllWhere("Staff", "MaNhanVien", staffId.ToString());
+            data = dataAPI.GetAllWhere("Staffs", "StaffID", staffId.ToString());
 
             DataTable dataTable = data.Tables[0];
-            int rowIndex = 0; // Chỉ định số hàng bạn muốn lấy (0 là hàng đầu tiên)
-            DataRow row = dataTable.Rows[rowIndex];
+            DataRow row = dataTable.Rows[0];
 
-            staffID.Text = row[0].ToString();
-            staffName.Text = row[1].ToString();
-            staffAddress.Text = row[2].ToString();
-            staffPhone.Text = row[3].ToString();
+            staffID.Text = row[0].ToString();       // StaffID
+            staffName.Text = row[1].ToString();     // Name
+            staffAddress.Text = row[2].ToString();  // Address
+            staffPhone.Text = row[3].ToString();    // Phone
+            staffUsername.Text = row[4].ToString(); // Username
+            staffPassword.Text = row[5].ToString(); // Password
         }
 
         private void staffClose_Click(object sender, EventArgs e)
@@ -129,11 +130,12 @@ namespace WinFormsApp1
                 toolTip1.Show("Hãy nhập số điện thoại nhân viên?", staffPhone, 0, 0, 1000);
                 return;
             }
-            string newRoom = "('" + staffID.Text.ToString() + "','" +
-               staffName.Text.ToString() + "','" + staffAddress.Text.ToString()
-               + "', '" + staffPhone.Text.ToString() + "')";
-            dataAPI.Delete("Staff", "MaNhanVien", staffId);
-            if (dataAPI.InsertInto("Staff", newRoom))
+            string newRoom = "(N'" + staffName.Text + "', N'" +
+                staffAddress.Text + "', '" + staffPhone.Text + "', '" +
+                staffUsername.Text + "', '" + staffPassword.Text + "', 1)";
+            dataAPI.Delete("Staffs", "StaffID", staffId);
+            dataAPI.InsertInto("Staffs (Name, Address, Phone, Username, Password, Role)", newRoom);
+            if (dataAPI.InsertInto("Staffs", newRoom))
             {
                 MessageBox.Show("Sửa dữ liệu nhân viên thành công!");
             }

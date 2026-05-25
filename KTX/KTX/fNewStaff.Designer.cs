@@ -40,11 +40,15 @@
             staffAddress = new TextBox();
             staffPhone = new TextBox();
             toolTip1 = new ToolTip(components);
+            staffUsername = new TextBox();
+            staffPassword = new TextBox();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // staffClose
             // 
-            staffClose.Location = new Point(420, 229);
+            staffClose.Location = new Point(473, 311);
             staffClose.Name = "staffClose";
             staffClose.Size = new Size(75, 23);
             staffClose.TabIndex = 5;
@@ -81,7 +85,7 @@
             // 
             // staffSave
             // 
-            staffSave.Location = new Point(265, 229);
+            staffSave.Location = new Point(199, 311);
             staffSave.Name = "staffSave";
             staffSave.Size = new Size(75, 23);
             staffSave.TabIndex = 4;
@@ -124,17 +128,57 @@
             // 
             // staffPhone
             // 
-            staffPhone.Location = new Point(199, 162);
+            staffPhone.Location = new Point(199, 165);
             staffPhone.Name = "staffPhone";
             staffPhone.Size = new Size(366, 23);
             staffPhone.TabIndex = 3;
             staffPhone.Validating += staffPhone_Validating;
             // 
+            // toolTip1
+            // 
+            toolTip1.Popup += toolTip1_Popup;
+            // 
+            // staffUsername
+            // 
+            staffUsername.Location = new Point(199, 210);
+            staffUsername.Name = "staffUsername";
+            staffUsername.Size = new Size(366, 23);
+            staffUsername.TabIndex = 17;
+            // 
+            // staffPassword
+            // 
+            staffPassword.Location = new Point(199, 250);
+            staffPassword.Name = "staffPassword";
+            staffPassword.Size = new Size(366, 23);
+            staffPassword.TabIndex = 18;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(30, 210);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 15);
+            label5.TabIndex = 20;
+            label5.Text = "Tên tài khoản";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(31, 253);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 15);
+            label6.TabIndex = 21;
+            label6.Text = "Mật khẩu";
+            // 
             // fNewStaff
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(635, 311);
+            ClientSize = new Size(635, 367);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(staffPassword);
+            Controls.Add(staffUsername);
             Controls.Add(staffPhone);
             Controls.Add(staffAddress);
             Controls.Add(staffName);
@@ -166,5 +210,9 @@
         private TextBox staffAddress;
         private TextBox staffPhone;
         private ToolTip toolTip1;
+        private TextBox staffUsername;
+        private TextBox staffPassword;
+        private Label label5;
+        private Label label6;
     }
 }

@@ -3,20 +3,72 @@
   "WorkspaceRootPath": "D:\\git\\WINDOWN3\\KTX\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260525102146_AddIsNotified.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:KTX\\Migrations\\20260525102146_AddIsNotified.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|D:\\git\\WINDOWN3\\KTX\\ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\models\\efcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\models\\efcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\fnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\fnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\fnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\fnewstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|D:\\git\\WINDOWN3\\KTX\\ktx\\feditstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\feditstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\feditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\feditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\fnewstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\fnewstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\feditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\feditstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\models\\dataapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\models\\dataapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\fnewstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\fnewstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|D:\\git\\WINDOWN3\\KTX\\ktx\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\migrations\\20260515064831_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\migrations\\20260515064831_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260515061755_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +83,6 @@
       "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\ktx.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|D:\\git\\WINDOWN3\\KTX\\ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\qlktx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|D:\\git\\WINDOWN3\\KTX\\ktx\\feditstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\feditstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|d:\\git\\windown3\\ktx\\ktx\\report\\bill.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{F8FF5DF8-13F9-4FB8-9036-D1647D3ABAE9}|KTX\\KTX.csproj|solutionrelative:ktx\\report\\bill.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     }
@@ -50,8 +94,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataAPI.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\DataAPI.cs",
+              "RelativeDocumentMoniker": "KTX\\Models\\DataAPI.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\DataAPI.cs",
+              "RelativeToolTip": "KTX\\Models\\DataAPI.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAwwMAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T02:22:30.096Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260525102146_AddIsNotified.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260525102146_AddIsNotified.cs",
+              "RelativeDocumentMoniker": "KTX\\Migrations\\20260525102146_AddIsNotified.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260525102146_AddIsNotified.cs",
+              "RelativeToolTip": "KTX\\Migrations\\20260525102146_AddIsNotified.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T10:21:46.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\Contract.cs",
+              "RelativeDocumentMoniker": "KTX\\Models\\Contract.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\Contract.cs",
+              "RelativeToolTip": "KTX\\Models\\Contract.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T10:20:04.355Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -70,32 +154,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Login.cs",
-              "RelativeDocumentMoniker": "KTX\\Login.cs",
-              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Login.cs [Design]",
-              "RelativeToolTip": "KTX\\Login.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "EFCore.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\EFCore.cs",
+              "RelativeDocumentMoniker": "KTX\\Models\\EFCore.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\EFCore.cs",
+              "RelativeToolTip": "KTX\\Models\\EFCore.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwCoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T02:26:49.304Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-25T09:08:08.151Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataAPI.cs",
-              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\DataAPI.cs",
-              "RelativeDocumentMoniker": "KTX\\Models\\DataAPI.cs",
-              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Models\\DataAPI.cs",
-              "RelativeToolTip": "KTX\\Models\\DataAPI.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAowMEAAAAAAAAAAAAAAA==",
+              "Title": "QLKTX.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs",
+              "RelativeDocumentMoniker": "KTX\\QLKTX.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs",
+              "RelativeToolTip": "KTX\\QLKTX.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAhwK4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T02:22:30.096Z",
+              "WhenOpened": "2026-05-25T08:15:31.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "QLKTX.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs",
+              "RelativeDocumentMoniker": "KTX\\QLKTX.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs [Design]",
+              "RelativeToolTip": "KTX\\QLKTX.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T05:34:16.288Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fNewStudent.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStudent.cs",
+              "RelativeDocumentMoniker": "KTX\\fNewStudent.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStudent.cs",
+              "RelativeToolTip": "KTX\\fNewStudent.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAwIwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T08:22:18.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fNewStudent.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStudent.cs",
+              "RelativeDocumentMoniker": "KTX\\fNewStudent.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStudent.cs [Design]",
+              "RelativeToolTip": "KTX\\fNewStudent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T09:09:56.03Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "fEditStudent.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStudent.cs",
+              "RelativeDocumentMoniker": "KTX\\fEditStudent.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStudent.cs [Design]",
+              "RelativeToolTip": "KTX\\fEditStudent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T05:34:16.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fEditStaff.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStaff.cs",
+              "RelativeDocumentMoniker": "KTX\\fEditStaff.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStaff.cs [Design]",
+              "RelativeToolTip": "KTX\\fEditStaff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:36:13.424Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "fNewStaff.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStaff.cs",
+              "RelativeDocumentMoniker": "KTX\\fNewStaff.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStaff.cs",
+              "RelativeToolTip": "KTX\\fNewStaff.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAYwEIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:40:32.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "fEditStaff.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStaff.cs",
+              "RelativeDocumentMoniker": "KTX\\fEditStaff.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStaff.cs",
+              "RelativeToolTip": "KTX\\fEditStaff.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAvwIQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:41:15.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "fNewStaff.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStaff.cs",
+              "RelativeDocumentMoniker": "KTX\\fNewStaff.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fNewStaff.cs [Design]",
+              "RelativeToolTip": "KTX\\fNewStaff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T07:15:17.92Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConnectionString.cs",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\ConnectionString.cs",
+              "RelativeDocumentMoniker": "KTX\\ConnectionString.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\ConnectionString.cs",
+              "RelativeToolTip": "KTX\\ConnectionString.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:35:13.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "20260515064831_InitialCreate.cs",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260515064831_InitialCreate.cs",
               "RelativeDocumentMoniker": "KTX\\Migrations\\20260515064831_InitialCreate.cs",
@@ -103,12 +300,11 @@
               "RelativeToolTip": "KTX\\Migrations\\20260515064831_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T06:48:32.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T06:48:32.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "20260515061755_InitialCreate.cs",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Migrations\\20260515061755_InitialCreate.cs",
               "RelativeDocumentMoniker": "KTX\\Migrations\\20260515061755_InitialCreate.cs",
@@ -120,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "App.config",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\App.config",
               "RelativeDocumentMoniker": "KTX\\App.config",
@@ -128,11 +324,23 @@
               "RelativeToolTip": "KTX\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-05-15T06:16:19.094Z"
+              "WhenOpened": "2026-05-15T06:16:19.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Login.cs",
+              "RelativeDocumentMoniker": "KTX\\Login.cs",
+              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\Login.cs [Design]",
+              "RelativeToolTip": "KTX\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T02:26:49.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "KTX.csproj",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\KTX.csproj",
               "RelativeDocumentMoniker": "KTX\\KTX.csproj",
@@ -144,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "fEditStudent.cs",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStudent.cs",
               "RelativeDocumentMoniker": "KTX\\fEditStudent.cs",
@@ -157,29 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "fEditStudent.cs [Design]",
-              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStudent.cs",
-              "RelativeDocumentMoniker": "KTX\\fEditStudent.cs",
-              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\fEditStudent.cs [Design]",
-              "RelativeToolTip": "KTX\\fEditStudent.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T05:34:16.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "QLKTX.cs [Design]",
-              "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs",
-              "RelativeDocumentMoniker": "KTX\\QLKTX.cs",
-              "ToolTip": "D:\\git\\WINDOWN3\\KTX\\KTX\\QLKTX.cs [Design]",
-              "RelativeToolTip": "KTX\\QLKTX.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T05:34:16.288Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "Bill.rdlc",
               "DocumentMoniker": "D:\\git\\WINDOWN3\\KTX\\KTX\\Report\\Bill.rdlc",
               "RelativeDocumentMoniker": "KTX\\Report\\Bill.rdlc",

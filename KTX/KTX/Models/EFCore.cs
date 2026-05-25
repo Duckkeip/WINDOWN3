@@ -38,9 +38,9 @@ namespace KTX.Models
                 .WithOne(c => c.Student)
                 .HasForeignKey(c => c.StudentID);
 
-            modelBuilder.Entity<Student>()
-            .Property(s => s.StudentID)
-            .UseIdentityColumn(2154810000, 1);
+            //modelBuilder.Entity<Student>()
+            //.Property(s => s.StudentID)
+            //.UseIdentityColumn(2154810000, 1);
 
             modelBuilder.Entity<Contract>()
             .Property(s => s.ContractID)

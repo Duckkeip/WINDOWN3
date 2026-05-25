@@ -28,8 +28,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1
 {
+
     public partial class QLKTX : Form
     {
+        private System.Windows.Forms.Timer contractTimer;
         public QLKTX()
         {
             InitializeComponent();
@@ -109,14 +111,46 @@ namespace WinFormsApp1
             tabPage18.Controls.Add(reportViewer);
 
         }
+
+        private void LoadStudents()
+        {
+            using (var db = new EFCore())
+            {
+                dataGridView1.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
+                dataGridView6.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
+                CountStudent.Text = "Số sinh viên: " + db.Students.Count().ToString();
+            }
+        }
+
+        private void ContractTimer_Tick(object sender, EventArgs e)
+        {
+            using (var db = new EFCore())
+            {
+                var expiredContracts = db.Contracts
+                    .Where(c => c.EndDate <= DateTime.Now && c.IsNotified == false)
+                    .Include(c => c.Student)
+                    .ToList();
+
+                foreach (var contract in expiredContracts)
+                {
+                    MessageBox.Show($"Hợp đồng #{contract.ContractID} của sinh viên {contract.Student.Name} đã hết hạn!");
+
+                    // Đánh dấu đã thông báo
+                    contract.IsNotified = true;
+                    db.SaveChanges();
+                }
+            }
+        }
         private void QLKTX_Load(object sender, EventArgs e)
         {
+            
+
             reportStudentAndContract();
             reportRooms();
             reportContract();
             using (var db = new EFCore())
             {
-                dataGridView1.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
+                LoadStudents();
                 dataGridView6.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
                 dataGridView2.DataSource = db.Rooms.Select(x => new { x.RoomID, x.RoomType, x.QuantityStudent, x.Status, x.Price }).ToList();
                 dataGridView3.DataSource = db.Contracts.Select(x => new { x.ContractID, x.StartDate, x.EndDate, x.StudentID, x.RoomID, x.Price }).ToList();
@@ -124,7 +158,7 @@ namespace WinFormsApp1
                 dataGridView4.DataSource = db.Staffs.Select(x => new { x.StaffID, x.Name, x.Address, x.Phone }).ToList();
             }
 
-
+                
             // Login 
             fLogin f = new fLogin();
 
@@ -133,6 +167,10 @@ namespace WinFormsApp1
             else
             {
                 f.Close();
+                contractTimer = new System.Windows.Forms.Timer();
+                contractTimer.Interval = 1000; // mỗi 1 giây
+                contractTimer.Tick += ContractTimer_Tick;
+                contractTimer.Start();
                 if (Utility.staff != null)
                 {
                     // Chào người dùng đăng nhập
@@ -198,7 +236,10 @@ namespace WinFormsApp1
         {
             if (Utility.IsOpeningForm("fNewStudent")) ;
             fNewStudent f = new fNewStudent();
-            f.Show();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                LoadStudents();
+            }
         }
 
         private void addNewRoom_Click(object sender, EventArgs e)
@@ -470,6 +511,7 @@ namespace WinFormsApp1
 
         private void saveContract_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrWhiteSpace(contractRoomID.Text))
             {
                 toolTip1.Show("Hãy nhập mã phòng?", contractRoomID, 0, 0, 1000);
@@ -480,10 +522,10 @@ namespace WinFormsApp1
                 toolTip1.Show("Hãy nhập mã sinh viên?", contractStudentID, 0, 0, 1000);
                 return;
             }
-            if (dateTimePickerStart.Value < DateTime.Now)
+            // ✅ Sửa - chỉ kiểm tra ngày kết thúc phải sau ngày bắt đầu
+            if (dateTimePickerEnd.Value <= dateTimePickerStart.Value)
             {
-                MessageBox.Show("Ngày không hợp lệ. Vui lòng chọn một ngày trong tương lai.");
-                dateTimePickerStart.Value = DateTime.Now;
+                MessageBox.Show("Ngày kết thúc phải sau ngày bắt đầu!");
                 return;
             }
 
@@ -502,28 +544,36 @@ namespace WinFormsApp1
                         MessageBox.Show("Sinh viên " + student.Gender + " không thể ở phòng " + room.RoomType);
                         return;
                     }
-                    // Lấy hợp đồng cần cập nhật từ cơ sở dữ liệu
-                    Contract contractToUpdate = db.Contracts.Single(c => c.ContractID == int.Parse(contractID.Text));
-
+                    
                     // Kiểm tra xem hợp đồng có tồn tại không
-                    if (contractToUpdate != null)
+                    // Thêm mới
+                    if (string.IsNullOrWhiteSpace(contractID.Text))
                     {
-                        // Cập nhật thông tin hợp đồng
-                        contractToUpdate.StartDate = dateTimePickerStart.Value;
-                        contractToUpdate.EndDate = dateTimePickerEnd.Value;
-                        contractToUpdate.StudentID = studentID;
-                        contractToUpdate.RoomID = rooomID;
-
-                        // Lưu thông tin vào cơ sở dữ liệu
+                        Contract newContract = new Contract();
+                        newContract.StartDate = dateTimePickerStart.Value;
+                        newContract.EndDate = dateTimePickerEnd.Value;
+                        newContract.StudentID = studentID;
+                        newContract.RoomID = rooomID;
+                        newContract.Price = room.Price;
+                        db.Contracts.Add(newContract);
                         db.SaveChanges();
-
-                        toolTip1.Show("Cập nhật hợp đồng thành công!", saveContract, 0, 0, 1000);
-                        QLKTX_Activated(sender, e);
+                        toolTip1.Show("Thêm hợp đồng thành công!", saveContract, 0, 0, 1000);
                     }
+                    // Sửa
                     else
                     {
-                        MessageBox.Show("Không tìm thấy hợp đồng để cập nhật.");
+                        Contract contractToUpdate = db.Contracts.SingleOrDefault(c => c.ContractID == int.Parse(contractID.Text));
+                        if (contractToUpdate != null)
+                        {
+                            contractToUpdate.StartDate = dateTimePickerStart.Value;
+                            contractToUpdate.EndDate = dateTimePickerEnd.Value;
+                            contractToUpdate.StudentID = studentID;
+                            contractToUpdate.RoomID = rooomID;
+                            db.SaveChanges();
+                            toolTip1.Show("Cập nhật hợp đồng thành công!", saveContract, 0, 0, 1000);
+                        }
                     }
+                    QLKTX_Activated(sender, e);
                 }
                 catch (Exception ex)
                 {

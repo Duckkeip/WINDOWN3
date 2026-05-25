@@ -45,6 +45,8 @@
             maleCheck = new CheckBox();
             label6 = new Label();
             toolTip1 = new ToolTip(components);
+            StudentID = new TextBox();
+            label9 = new Label();
             SuspendLayout();
             // 
             // btClose
@@ -144,7 +146,7 @@
             // 
             // studentName
             // 
-            studentName.Location = new Point(135, 90);
+            studentName.Location = new Point(135, 52);
             studentName.Name = "studentName";
             studentName.Size = new Size(504, 23);
             studentName.TabIndex = 0;
@@ -162,9 +164,9 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label7.ForeColor = Color.IndianRed;
-            label7.Location = new Point(135, 44);
+            label7.Location = new Point(258, 18);
             label7.Name = "label7";
             label7.Size = new Size(165, 20);
             label7.TabIndex = 25;
@@ -185,17 +187,35 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 90);
+            label6.Location = new Point(22, 55);
             label6.Name = "label6";
             label6.Size = new Size(75, 15);
             label6.TabIndex = 28;
             label6.Text = "Tên sinh viên";
+            // 
+            // StudentID
+            // 
+            StudentID.Location = new Point(135, 91);
+            StudentID.Name = "StudentID";
+            StudentID.Size = new Size(504, 23);
+            StudentID.TabIndex = 29;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(21, 94);
+            label9.Name = "label9";
+            label9.Size = new Size(37, 15);
+            label9.TabIndex = 30;
+            label9.Text = "MSSV";
             // 
             // fNewStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(705, 331);
+            Controls.Add(label9);
+            Controls.Add(StudentID);
             Controls.Add(label6);
             Controls.Add(maleCheck);
             Controls.Add(label7);
@@ -239,5 +259,7 @@
         private Label label8;
         private TextBox studentRoom;
         private ToolTip toolTip1;
+        private TextBox StudentID;
+        private Label label9;
     }
 }

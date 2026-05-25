@@ -9,7 +9,7 @@ namespace WinFormsApp1
     internal class ConnectionString
     {
         // Thêm @ để lấy giá trị chuỗi tuyệt đối, không format lại chuỗi.
-        public static string connectionString = @"Data Source=DESKTOP-EJMUOGT\MSSQLSERVER2022;Initial Catalog=KTXVAA;Integrated Security=True";
+        public static string connectionString = @"Server=DESKTOP-DGCSRGJ;Database=KTXVAA;Trusted_Connection=True;TrustServerCertificate=True;";
         public ConnectionString() { }
     }
 }
