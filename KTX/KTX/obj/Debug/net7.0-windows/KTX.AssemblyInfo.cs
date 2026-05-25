@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KTX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7539334c91e0d325ba6e36ed3ce42ceceb6bbf1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("KTX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KTX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
