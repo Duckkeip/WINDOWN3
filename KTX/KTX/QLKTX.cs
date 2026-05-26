@@ -35,10 +35,12 @@ namespace WinFormsApp1
         public QLKTX()
         {
             InitializeComponent();
-            
+
         }
         public void reportStudentAndContract()
         {
+            tabPage15.Controls.Clear();
+
             EFCore db = new EFCore();
             var reportViewer = new ReportViewer
             {
@@ -57,6 +59,9 @@ namespace WinFormsApp1
         }
         public void reportRooms()
         {
+            // Xóa reportViewer cũ trong tabPage16
+            tabPage16.Controls.Clear();
+
             EFCore db = new EFCore();
             var reportViewer = new ReportViewer
             {
@@ -68,13 +73,13 @@ namespace WinFormsApp1
             reportViewer.LocalReport.ReportPath =
             Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName +
             "\\Report\\RoomChart.rdlc";
-            Controls.Add(reportViewer);
             reportViewer.RefreshReport();
             tabPage16.Controls.Add(reportViewer);
-
         }
         public void reportContract()
         {
+            tabPage9.Controls.Clear();
+
             EFCore db = new EFCore();
             var reportViewer = new ReportViewer
             {
@@ -124,6 +129,7 @@ namespace WinFormsApp1
 
         private void ContractTimer_Tick(object sender, EventArgs e)
         {
+            UpdateCountDown();
             using (var db = new EFCore())
             {
                 var expiredContracts = db.Contracts
@@ -141,10 +147,43 @@ namespace WinFormsApp1
                 }
             }
         }
+        private void LoadRooms()
+        {
+            using (var db = new EFCore())
+            {
+                dataGridView2.DataSource = db.Rooms.Select(x => new {
+                    x.RoomID,
+                    x.RoomType,
+                    x.QuantityStudent,
+                    x.Status,
+                    x.Price,
+                    
+                }).ToList();
+            }
+        }
+
+        private void LoadContracts()
+        {
+            using (var db = new EFCore())
+            {
+                dataGridView3.DataSource = db.Contracts.Select(x => new {
+                    x.ContractID,
+                    x.StartDate,
+                    x.EndDate,
+                    x.StudentID,
+                    x.RoomID,
+                    x.Price,
+                    
+                }).ToList();
+
+                // Cập nhật đếm ngược ngay
+                if (!dataGridView3.Columns.Contains("CountDown"))
+                    dataGridView3.Columns.Add("CountDown", "Còn lại");
+                UpdateCountDown();
+            }
+        }
         private void QLKTX_Load(object sender, EventArgs e)
         {
-            
-
             reportStudentAndContract();
             reportRooms();
             reportContract();
@@ -152,13 +191,13 @@ namespace WinFormsApp1
             {
                 LoadStudents();
                 dataGridView6.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
-                dataGridView2.DataSource = db.Rooms.Select(x => new { x.RoomID, x.RoomType, x.QuantityStudent, x.Status, x.Price }).ToList();
-                dataGridView3.DataSource = db.Contracts.Select(x => new { x.ContractID, x.StartDate, x.EndDate, x.StudentID, x.RoomID, x.Price }).ToList();
+                LoadRooms();
+                LoadContracts();
                 dataGridView9.DataSource = db.Contracts.Select(x => new { x.ContractID, x.StartDate, x.EndDate, x.StudentID, x.RoomID, x.Price }).ToList();
                 dataGridView4.DataSource = db.Staffs.Select(x => new { x.StaffID, x.Name, x.Address, x.Phone }).ToList();
             }
 
-                
+
             // Login 
             fLogin f = new fLogin();
 
@@ -220,14 +259,43 @@ namespace WinFormsApp1
 
             }
         }
+        private void UpdateCountDown()
+        {
+            foreach (DataGridViewRow row in dataGridView3.Rows)
+            {
+                if (row.Cells["EndDate"].Value != null)
+                {
+                    DateTime endDate = Convert.ToDateTime(row.Cells["EndDate"].Value);
+                    TimeSpan remaining = endDate - DateTime.Now;
 
+                    if (remaining.TotalSeconds <= 0)
+                        row.Cells["CountDown"].Value = "Đã hết hạn";
+                    else
+                        row.Cells["CountDown"].Value = $"{remaining.Days} ngày {remaining.Hours} giờ {remaining.Minutes} phút {remaining.Seconds} giây";
+                }
+            }
+        }
         private void QLKTX_Activated(object sender, EventArgs e)
         {
             using (var db = new EFCore())
             {
                 dataGridView1.DataSource = db.Students.Select(x => new { x.StudentID, x.Name, x.DoB, x.Class, x.Gender, x.Address }).ToList();
                 dataGridView2.DataSource = db.Rooms.Select(x => new { x.RoomID, x.RoomType, x.QuantityStudent, x.Status, x.Price }).ToList();
-                dataGridView3.DataSource = db.Contracts.OrderByDescending(x => x.ContractID).Select(x => new { x.ContractID, x.StartDate, x.EndDate, x.StudentID, x.RoomID, x.Price }).ToList();
+                dataGridView3.DataSource = db.Contracts.Select(x => new {
+                    x.ContractID,
+                    x.StartDate,
+                    x.EndDate,
+                    x.StudentID,
+                    x.RoomID,
+                    x.Price
+                }).ToList();
+
+                // Thêm cột đếm ngược nếu chưa có
+                if (!dataGridView3.Columns.Contains("CountDown"))
+                {
+                    dataGridView3.Columns.Add("CountDown", "Còn lại");
+                }
+                UpdateCountDown(); // cập nhật ngay lần đầu
                 dataGridView4.DataSource = db.Staffs.Select(x => new { x.StaffID, x.Name, x.Address, x.Phone }).ToList();
             }
         }
@@ -239,6 +307,7 @@ namespace WinFormsApp1
             if (f.ShowDialog() == DialogResult.OK)
             {
                 LoadStudents();
+                
             }
         }
 
@@ -246,7 +315,11 @@ namespace WinFormsApp1
         {
             if (Utility.IsOpeningForm("fNewRoom")) ;
             fNewRoom f = new fNewRoom();
-            f.Show();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                LoadRooms();
+                reportRooms();
+            }
         }
 
         private void addNewStaff_Click(object sender, EventArgs e)
@@ -338,9 +411,13 @@ namespace WinFormsApp1
             {
                 try
                 {
-                    if (Utility.IsOpeningForm("fEditRoom")) ;
-                    fEditRoom f = new fEditRoom((int)dataGridView2.Rows[e.RowIndex].Cells["RoomID"].Value);
-                    f.Show();
+                    if (!Utility.IsOpeningForm("fEditRoom"))
+                    {
+                        fEditRoom f = new fEditRoom((int)dataGridView2.Rows[e.RowIndex].Cells["RoomID"].Value);
+                        f.ShowDialog();
+                        LoadRooms(); // cập nhật lại danh sách phòng sau khi sửa
+                        reportRooms();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -357,8 +434,8 @@ namespace WinFormsApp1
             {
                 try
                 {
-                    string staffID = dataGridView4.Rows[e.RowIndex].Cells["MaNhanVien"].Value.ToString();
-                    if (MessageBox.Show("Bạn muốn xóa nhân viên " + dataGridView4.Rows[e.RowIndex].Cells["TenNhanVien"].Value, "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    string staffID = dataGridView4.Rows[e.RowIndex].Cells["StaffID"].Value.ToString();
+                    if (MessageBox.Show("Bạn muốn xóa nhân viên " + dataGridView4.Rows[e.RowIndex].Cells["Name"].Value, "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (true)
                         {
@@ -378,7 +455,7 @@ namespace WinFormsApp1
                 try
                 {
                     if (Utility.IsOpeningForm("fEditStaff")) ;
-                    fEditStaff f = new fEditStaff((string)dataGridView4.Rows[e.RowIndex].Cells["MaNhanVien"].Value);
+                    fEditStaff f = new fEditStaff((string)dataGridView4.Rows[e.RowIndex].Cells["StaffID"].Value);
                     f.Show();
                 }
                 catch (Exception ex)
@@ -399,10 +476,20 @@ namespace WinFormsApp1
                     {
                         Contract contract =
                         db.Contracts.Single(c => c.ContractID == ContractID);
+
                         if (MessageBox.Show("Bạn muốn xóa hợp đồng " + contract.ContractID,
                         "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                         == DialogResult.Yes)
                         {
+                            // Cập nhật lại trạng thái phòng về còn chỗ
+                            Room room = db.Rooms.Single(r => r.RoomID == contract.RoomID);
+                            int currentOccupants = db.Contracts.Count(c => c.RoomID == contract.RoomID);
+                            if (currentOccupants - 1 < room.QuantityStudent)
+                            {
+                                room.Status = "Còn chỗ";
+                                db.Rooms.Update(room);
+                            }
+
                             db.Contracts.Remove(contract);
                             db.SaveChanges();
                             QLKTX_Activated(sender, e);
@@ -495,17 +582,53 @@ namespace WinFormsApp1
                         contract.Price = room.Price;
                         db.Contracts.Add(contract);
                         db.SaveChanges();
+                        LoadRooms();      // thêm
+                        LoadContracts();
                         QLKTX_Activated(sender, e);
                         toolTip1.Show("Thêm hợp đồng thành công!", addContract);
 
                     }
+                }
+                else
+                {
+                    // Sinh viên chưa có hợp đồng nào -> thêm mới luôn
+                    if (dateTimePickerStart.Value >= dateTimePickerEnd.Value)
+                    {
+                        MessageBox.Show("Ngày bắt đầu phải bé hơn ngày kết thúc!");
+                        return;
+                    }
 
+                    // Kiểm tra phòng còn chỗ không
+                    int currentOccupants = db.Contracts.Count(c => c.RoomID == rooomID && c.EndDate > DateTime.Now);
+                    if (currentOccupants >= room.QuantityStudent)
+                    {
+                        MessageBox.Show("Phòng " + rooomID + " đã đầy!");
+                        return;
+                    }
 
+                    Contract contract = new Contract();
+                    contract.StudentID = studentID;
+                    contract.RoomID = rooomID;
+                    contract.StartDate = dateTimePickerStart.Value;
+                    contract.EndDate = dateTimePickerEnd.Value;
+                    contract.Price = room.Price;
+                    db.Contracts.Add(contract);
+
+                    // Cập nhật trạng thái phòng nếu đầy
+                    if (currentOccupants + 1 >= room.QuantityStudent)
+                    {
+                        room.Status = "Đầy";
+                        db.Rooms.Update(room);
+                    }
+                    db.Rooms.Update(room);
+                    db.SaveChanges();
+                    LoadRooms();      // thêm
+                    LoadContracts();
+                    QLKTX_Activated(sender, e);
+                    toolTip1.Show("Thêm hợp đồng thành công!", addContract);
                 }
 
             }
-
-
 
         }
 
@@ -544,11 +667,27 @@ namespace WinFormsApp1
                         MessageBox.Show("Sinh viên " + student.Gender + " không thể ở phòng " + room.RoomType);
                         return;
                     }
-                    
+
                     // Kiểm tra xem hợp đồng có tồn tại không
                     // Thêm mới
                     if (string.IsNullOrWhiteSpace(contractID.Text))
                     {
+                        // Kiểm tra sinh viên đã có hợp đồng chưa
+                        bool studentHasContract = db.Contracts.Any(c => c.StudentID == studentID);
+                        if (studentHasContract)
+                        {
+                            MessageBox.Show("Sinh viên này đã có hợp đồng rồi!");
+                            return;
+                        }
+
+                        // Kiểm tra phòng còn chỗ không
+                        int currentOccupants = db.Contracts.Count(c => c.RoomID == rooomID);
+                        if (currentOccupants >= room.QuantityStudent)
+                        {
+                            MessageBox.Show("Phòng " + rooomID + " đã đầy!");
+                            return;
+                        }
+
                         Contract newContract = new Contract();
                         newContract.StartDate = dateTimePickerStart.Value;
                         newContract.EndDate = dateTimePickerEnd.Value;
@@ -556,6 +695,14 @@ namespace WinFormsApp1
                         newContract.RoomID = rooomID;
                         newContract.Price = room.Price;
                         db.Contracts.Add(newContract);
+
+                        // Cập nhật trạng thái phòng nếu đầy
+                        if (currentOccupants + 1 >= room.QuantityStudent)
+                        {
+                            room.Status = "Đầy";
+                            db.Rooms.Update(room);
+                        }
+
                         db.SaveChanges();
                         toolTip1.Show("Thêm hợp đồng thành công!", saveContract, 0, 0, 1000);
                     }
@@ -648,6 +795,11 @@ namespace WinFormsApp1
                 });
             });
             processThread.Start();
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

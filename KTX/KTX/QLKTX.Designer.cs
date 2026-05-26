@@ -172,7 +172,7 @@ namespace WinFormsApp1
             // hello
             // 
             hello.AutoSize = true;
-            hello.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            hello.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             hello.ForeColor = SystemColors.ButtonHighlight;
             hello.Location = new Point(525, 27);
             hello.Name = "hello";
@@ -193,7 +193,7 @@ namespace WinFormsApp1
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(114, 27);
             label1.Name = "label1";
@@ -215,17 +215,17 @@ namespace WinFormsApp1
             guna2TabControl1.Size = new Size(1289, 726);
             guna2TabControl1.TabButtonHoverState.BorderColor = Color.Empty;
             guna2TabControl1.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
-            guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2TabControl1.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
             guna2TabControl1.TabButtonHoverState.ForeColor = Color.White;
             guna2TabControl1.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
             guna2TabControl1.TabButtonIdleState.BorderColor = Color.Empty;
             guna2TabControl1.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
-            guna2TabControl1.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2TabControl1.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
             guna2TabControl1.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
             guna2TabControl1.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
             guna2TabControl1.TabButtonSelectedState.BorderColor = Color.Empty;
             guna2TabControl1.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
-            guna2TabControl1.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2TabControl1.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
             guna2TabControl1.TabButtonSelectedState.ForeColor = Color.White;
             guna2TabControl1.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
             guna2TabControl1.TabButtonSize = new Size(200, 70);
@@ -235,7 +235,7 @@ namespace WinFormsApp1
             // tabPage1
             // 
             tabPage1.Controls.Add(tabControl1);
-            tabPage1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage1.Font = new Font("Segoe UI", 12F);
             tabPage1.Location = new Point(204, 4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -264,7 +264,7 @@ namespace WinFormsApp1
             tabPage5.Controls.Add(dataGridView1);
             tabPage5.Controls.Add(studentAdd);
             tabPage5.Controls.Add(label2);
-            tabPage5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage5.Font = new Font("Segoe UI", 9.75F);
             tabPage5.Location = new Point(4, 34);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
@@ -292,7 +292,6 @@ namespace WinFormsApp1
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { StudentID, StudentName, DoB, Class, Gender, Address, Sửa, Xóa });
             dataGridView1.Location = new Point(6, 84);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1055, 584);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -363,7 +362,7 @@ namespace WinFormsApp1
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.ForeColor = Color.IndianRed;
             label2.Location = new Point(40, 20);
             label2.Name = "label2";
@@ -391,7 +390,7 @@ namespace WinFormsApp1
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 10F);
             label6.Location = new Point(186, 43);
             label6.Name = "label6";
             label6.Size = new Size(116, 19);
@@ -401,7 +400,7 @@ namespace WinFormsApp1
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 10F);
             label5.Location = new Point(186, 11);
             label5.Name = "label5";
             label5.Size = new Size(78, 19);
@@ -410,7 +409,7 @@ namespace WinFormsApp1
             // 
             // roomStatus
             // 
-            roomStatus.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            roomStatus.Font = new Font("Segoe UI", 10F);
             roomStatus.FormattingEnabled = true;
             roomStatus.Items.AddRange(new object[] { "Tất cả", "Còn trống", "Đã đủ người" });
             roomStatus.Location = new Point(323, 41);
@@ -421,7 +420,7 @@ namespace WinFormsApp1
             // 
             // roomType
             // 
-            roomType.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            roomType.Font = new Font("Segoe UI", 10F);
             roomType.FormattingEnabled = true;
             roomType.ItemHeight = 17;
             roomType.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
@@ -440,7 +439,6 @@ namespace WinFormsApp1
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { RoomID, Type, Quantity, Status, Price, Edit, Delete });
             dataGridView2.Location = new Point(2, 72);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(1059, 596);
             dataGridView2.TabIndex = 9;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
@@ -497,7 +495,7 @@ namespace WinFormsApp1
             // addNewRoom
             // 
             addNewRoom.BackColor = Color.IndianRed;
-            addNewRoom.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            addNewRoom.Font = new Font("Segoe UI", 10F);
             addNewRoom.Location = new Point(462, 8);
             addNewRoom.Name = "addNewRoom";
             addNewRoom.Size = new Size(145, 33);
@@ -509,7 +507,7 @@ namespace WinFormsApp1
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label3.ForeColor = Color.IndianRed;
             label3.Location = new Point(26, 18);
             label3.Name = "label3";
@@ -522,7 +520,7 @@ namespace WinFormsApp1
             tabPage8.Controls.Add(dataGridView3);
             tabPage8.Controls.Add(label14);
             tabPage8.Controls.Add(groupBox5);
-            tabPage8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage8.Font = new Font("Segoe UI", 9.75F);
             tabPage8.Location = new Point(4, 34);
             tabPage8.Name = "tabPage8";
             tabPage8.Size = new Size(1067, 674);
@@ -541,7 +539,6 @@ namespace WinFormsApp1
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { ID, StartDate, EndDate, Student, Room, Prices, contractEdit, contractRemove });
             dataGridView3.Location = new Point(3, 171);
             dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowTemplate.Height = 25;
             dataGridView3.Size = new Size(1061, 500);
             dataGridView3.TabIndex = 13;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
@@ -601,7 +598,7 @@ namespace WinFormsApp1
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label14.ForeColor = Color.IndianRed;
             label14.Location = new Point(232, 17);
             label14.Name = "label14";
@@ -629,6 +626,7 @@ namespace WinFormsApp1
             groupBox5.Size = new Size(1048, 125);
             groupBox5.TabIndex = 7;
             groupBox5.TabStop = false;
+            groupBox5.Enter += groupBox5_Enter;
             // 
             // contractCancel
             // 
@@ -668,7 +666,7 @@ namespace WinFormsApp1
             // 
             // dateTimePickerEnd
             // 
-            dateTimePickerEnd.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dateTimePickerEnd.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             dateTimePickerEnd.Format = DateTimePickerFormat.Custom;
             dateTimePickerEnd.Location = new Point(636, 53);
             dateTimePickerEnd.Name = "dateTimePickerEnd";
@@ -689,7 +687,7 @@ namespace WinFormsApp1
             // 
             // dateTimePickerStart
             // 
-            dateTimePickerStart.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dateTimePickerStart.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             dateTimePickerStart.Format = DateTimePickerFormat.Custom;
             dateTimePickerStart.Location = new Point(636, 19);
             dateTimePickerStart.Name = "dateTimePickerStart";
@@ -769,7 +767,6 @@ namespace WinFormsApp1
             dataGridView4.Columns.AddRange(new DataGridViewColumn[] { Sua, Xoa });
             dataGridView4.Location = new Point(2, 52);
             dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowTemplate.Height = 25;
             dataGridView4.Size = new Size(1052, 608);
             dataGridView4.TabIndex = 9;
             dataGridView4.CellContentClick += dataGridView4_CellContentClick;
@@ -805,7 +802,7 @@ namespace WinFormsApp1
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label4.ForeColor = Color.IndianRed;
             label4.Location = new Point(39, 14);
             label4.Name = "label4";
@@ -816,7 +813,7 @@ namespace WinFormsApp1
             // tabPage2
             // 
             tabPage2.Controls.Add(tabControl2);
-            tabPage2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage2.Font = new Font("Segoe UI", 12F);
             tabPage2.Location = new Point(204, 4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -842,7 +839,7 @@ namespace WinFormsApp1
             tabPage10.Controls.Add(dataGridView6);
             tabPage10.Controls.Add(label32);
             tabPage10.Controls.Add(groupBox6);
-            tabPage10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage10.Font = new Font("Segoe UI", 9.75F);
             tabPage10.Location = new Point(4, 34);
             tabPage10.Name = "tabPage10";
             tabPage10.Padding = new Padding(3);
@@ -859,7 +856,6 @@ namespace WinFormsApp1
             dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView6.Location = new Point(3, 118);
             dataGridView6.Name = "dataGridView6";
-            dataGridView6.RowTemplate.Height = 25;
             dataGridView6.Size = new Size(1058, 492);
             dataGridView6.TabIndex = 7;
             dataGridView6.CellContentClick += dataGridView6_CellContentClick;
@@ -867,7 +863,7 @@ namespace WinFormsApp1
             // label32
             // 
             label32.AutoSize = true;
-            label32.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label32.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label32.ForeColor = Color.IndianRed;
             label32.Location = new Point(245, 14);
             label32.Name = "label32";
@@ -909,7 +905,7 @@ namespace WinFormsApp1
             tabPage14.Controls.Add(dataGridView9);
             tabPage14.Controls.Add(label35);
             tabPage14.Controls.Add(groupBox9);
-            tabPage14.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage14.Font = new Font("Segoe UI", 9.75F);
             tabPage14.Location = new Point(4, 34);
             tabPage14.Name = "tabPage14";
             tabPage14.Size = new Size(1067, 674);
@@ -926,14 +922,13 @@ namespace WinFormsApp1
             dataGridView9.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView9.Location = new Point(6, 135);
             dataGridView9.Name = "dataGridView9";
-            dataGridView9.RowTemplate.Height = 25;
             dataGridView9.Size = new Size(1061, 475);
             dataGridView9.TabIndex = 14;
             // 
             // label35
             // 
             label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label35.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label35.ForeColor = Color.IndianRed;
             label35.Location = new Point(248, 5);
             label35.Name = "label35";
@@ -973,7 +968,7 @@ namespace WinFormsApp1
             // tabPage3
             // 
             tabPage3.Controls.Add(tabControl3);
-            tabPage3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage3.Font = new Font("Segoe UI", 12F);
             tabPage3.Location = new Point(204, 4);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(1081, 718);
@@ -998,7 +993,7 @@ namespace WinFormsApp1
             // tabPage15
             // 
             tabPage15.Controls.Add(label16);
-            tabPage15.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage15.Font = new Font("Segoe UI", 9.75F);
             tabPage15.Location = new Point(4, 34);
             tabPage15.Name = "tabPage15";
             tabPage15.Padding = new Padding(3);
@@ -1010,7 +1005,7 @@ namespace WinFormsApp1
             // label16
             // 
             label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label16.ForeColor = Color.IndianRed;
             label16.Location = new Point(43, 23);
             label16.Name = "label16";
@@ -1041,7 +1036,7 @@ namespace WinFormsApp1
             tabPage18.Controls.Add(Print);
             tabPage18.Controls.Add(progressBar);
             tabPage18.Controls.Add(printID);
-            tabPage18.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage18.Font = new Font("Segoe UI", 9.75F);
             tabPage18.Location = new Point(4, 34);
             tabPage18.Name = "tabPage18";
             tabPage18.Size = new Size(1073, 680);
@@ -1079,7 +1074,7 @@ namespace WinFormsApp1
             // 
             tabPage4.Controls.Add(label17);
             tabPage4.Controls.Add(guna2PictureBox1);
-            tabPage4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tabPage4.Font = new Font("Segoe UI", 12F);
             tabPage4.Location = new Point(204, 4);
             tabPage4.Name = "tabPage4";
             tabPage4.Size = new Size(1081, 718);
@@ -1090,7 +1085,7 @@ namespace WinFormsApp1
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label17.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Italic);
             label17.Location = new Point(252, 208);
             label17.Name = "label17";
             label17.Size = new Size(504, 37);

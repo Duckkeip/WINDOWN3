@@ -37,9 +37,9 @@
             roomSave = new Button();
             roomPrice = new MaskedTextBox();
             label5 = new Label();
-            roomType = new TextBox();
             roomStudent = new TextBox();
-            roomStatus = new TextBox();
+            roomType = new ComboBox();
+            roomStatus = new ComboBox();
             SuspendLayout();
             // 
             // roomClose
@@ -105,13 +105,6 @@
             label5.TabIndex = 17;
             label5.Text = "Giá phòng";
             // 
-            // roomType
-            // 
-            roomType.Location = new Point(215, 28);
-            roomType.Name = "roomType";
-            roomType.Size = new Size(366, 23);
-            roomType.TabIndex = 0;
-            // 
             // roomStudent
             // 
             roomStudent.Location = new Point(215, 72);
@@ -119,12 +112,25 @@
             roomStudent.Size = new Size(366, 23);
             roomStudent.TabIndex = 1;
             // 
+            // roomType
+            // 
+            roomType.DropDownStyle = ComboBoxStyle.DropDownList;
+            roomType.FormattingEnabled = true;
+            roomType.Items.AddRange(new object[] { "Nam", "Nữ" });
+            roomType.Location = new Point(215, 28);
+            roomType.Name = "roomType";
+            roomType.Size = new Size(121, 23);
+            roomType.TabIndex = 18;
+            // 
             // roomStatus
             // 
-            roomStatus.Location = new Point(215, 118);
+            roomStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            roomStatus.FormattingEnabled = true;
+            roomStatus.Items.AddRange(new object[] { "Còn chỗ", "Đầy" });
+            roomStatus.Location = new Point(215, 121);
             roomStatus.Name = "roomStatus";
-            roomStatus.Size = new Size(366, 23);
-            roomStatus.TabIndex = 2;
+            roomStatus.Size = new Size(121, 23);
+            roomStatus.TabIndex = 19;
             // 
             // fEditRoom
             // 
@@ -132,8 +138,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(623, 280);
             Controls.Add(roomStatus);
-            Controls.Add(roomStudent);
             Controls.Add(roomType);
+            Controls.Add(roomStudent);
             Controls.Add(roomPrice);
             Controls.Add(label5);
             Controls.Add(roomClose);
@@ -160,8 +166,8 @@
         private Label label1;
         private MaskedTextBox roomPrice;
         private Label label5;
-        private TextBox roomType;
         private TextBox roomStudent;
-        private TextBox roomStatus;
+        private ComboBox roomType;
+        private ComboBox roomStatus;
     }
 }

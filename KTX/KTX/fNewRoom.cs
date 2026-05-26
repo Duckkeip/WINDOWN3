@@ -55,9 +55,9 @@ namespace WinFormsApp1
                     db.Rooms.Add(room);
                     db.SaveChanges();
                 }
-                roomType.ResetText();
+                roomType.SelectedIndex = -1;
                 roomStudent.ResetText();
-                roomStatus.ResetText();
+                roomStatus.SelectedIndex = -1;
                 roomPrice.ResetText();
                 toolTip1.Show("Lưu thành công!", roomSave, 0, 0, 1000);
             }

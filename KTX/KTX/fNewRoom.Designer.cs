@@ -37,9 +37,9 @@
             roomClose = new Button();
             label5 = new Label();
             roomPrice = new TextBox();
-            roomType = new TextBox();
             roomStudent = new TextBox();
-            roomStatus = new TextBox();
+            roomType = new ComboBox();
+            roomStatus = new ComboBox();
             SuspendLayout();
             // 
             // roomSave
@@ -92,7 +92,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(45, 175);
+            label5.Location = new Point(50, 170);
             label5.Name = "label5";
             label5.Size = new Size(62, 15);
             label5.TabIndex = 7;
@@ -100,17 +100,10 @@
             // 
             // roomPrice
             // 
-            roomPrice.Location = new Point(213, 172);
+            roomPrice.Location = new Point(213, 167);
             roomPrice.Name = "roomPrice";
             roomPrice.Size = new Size(366, 23);
             roomPrice.TabIndex = 3;
-            // 
-            // roomType
-            // 
-            roomType.Location = new Point(213, 31);
-            roomType.Name = "roomType";
-            roomType.Size = new Size(366, 23);
-            roomType.TabIndex = 0;
             // 
             // roomStudent
             // 
@@ -120,13 +113,25 @@
             roomStudent.TabIndex = 1;
             roomStudent.TextChanged += roomStudent_TextChanged;
             // 
+            // roomType
+            // 
+            roomType.DropDownStyle = ComboBoxStyle.DropDownList;
+            roomType.FormattingEnabled = true;
+            roomType.Items.AddRange(new object[] { "Nam", "Nữ" });
+            roomType.Location = new Point(213, 31);
+            roomType.Name = "roomType";
+            roomType.Size = new Size(121, 23);
+            roomType.TabIndex = 8;
+            // 
             // roomStatus
             // 
-            roomStatus.Location = new Point(213, 116);
+            roomStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            roomStatus.FormattingEnabled = true;
+            roomStatus.Items.AddRange(new object[] { "Còn chỗ", "Đầy" });
+            roomStatus.Location = new Point(213, 119);
             roomStatus.Name = "roomStatus";
-            roomStatus.Size = new Size(366, 23);
-            roomStatus.TabIndex = 2;
-            roomStatus.Text = "Còn trống";
+            roomStatus.Size = new Size(121, 23);
+            roomStatus.TabIndex = 9;
             // 
             // fNewRoom
             // 
@@ -134,8 +139,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(620, 298);
             Controls.Add(roomStatus);
-            Controls.Add(roomStudent);
             Controls.Add(roomType);
+            Controls.Add(roomStudent);
             Controls.Add(roomPrice);
             Controls.Add(label5);
             Controls.Add(roomClose);
@@ -163,8 +168,8 @@
         private Button roomClose;
         private Label label5;
         private TextBox roomPrice;
-        private TextBox roomType;
         private TextBox roomStudent;
-        private TextBox roomStatus;
+        private ComboBox roomType;
+        private ComboBox roomStatus;
     }
 }

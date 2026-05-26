@@ -27,15 +27,14 @@ namespace WinFormsApp1
         {
             room = db.Rooms.Single(p => p.RoomID == ID);
             Text += " - Mã phòng " + room.RoomID.ToString();
-            roomType.Text = room.RoomType;
+            roomType.SelectedItem = room.RoomType;
             roomStudent.Text = room.QuantityStudent.ToString();
-            roomStatus.Text = room.Status;
+            roomStatus.SelectedItem = room.Status;
             roomPrice.Text = room.Price.ToString();
         }
 
         private void roomSave_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(roomType.Text))
             {
                 toolTip1.Show("Hãy nhập loại phòng?", roomID, 0, 0, 1000);
@@ -52,6 +51,23 @@ namespace WinFormsApp1
                 return;
             }
 
+            // Thêm phần này
+            try
+            {
+                room.RoomType = roomType.Text;
+                room.QuantityStudent = int.Parse(roomStudent.Text);
+                room.Status = roomStatus.Text;
+                room.Price = decimal.Parse(roomPrice.Text);
+                db.Rooms.Update(room);
+                db.SaveChanges();
+                toolTip1.Show("Lưu thành công!", roomSave, 0, 0, 1000);
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
 
         private void roomClose_Click(object sender, EventArgs e)
